@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchPost, deletePost } from '../actions/index';
 import { Link } from 'react-router';
+import { fetchPost, deletePost } from '../actions/index';
+
 
 class PostsShow extends Component {
   static contextTypes = {
@@ -29,7 +30,8 @@ class PostsShow extends Component {
         <Link to="/">Back To Index</Link>
         <button
           className="btn btn-danger floatRight"
-          onClick={this.onDeleteClick.bind(this)}>
+          onClick={this.onDeleteClick.bind(this)}
+        >
           Delete Post
         </button>
         <h3>{post.title}</h3>
